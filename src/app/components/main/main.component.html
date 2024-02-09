@@ -1,0 +1,98 @@
+<div id="dark-mode-container" [ngClass]="{'dark-mode': this.styleService.theme=='DarkMode'}">
+    <div class="body">
+        <div class="container">
+            <div class="nav">
+                <div class="profile-image">
+                    <div *ngIf="flag; else defaultProfileBlock">
+                        <fa-icon [icon]="user" style="font-size: 50px;"></fa-icon>
+                      </div>
+                      
+                      <!-- Template to show if showProfile is false -->
+                      <ng-template #defaultProfileBlock>
+                        <img src={{profilePhotoUrl}} alt="profile Photo" style="width: 70px; height: 70px; border-radius: 50%;">
+                      </ng-template>
+                    <h3>{{name}}</h3>
+                </div>
+                <!-- <button class="message-icon">
+                    <fa-icon [icon]="message"></fa-icon>
+                </button>
+                <button class="phone-icon">
+                    <fa-icon [icon]="phone"></fa-icon>
+                </button>
+                <button class="notification-icon">
+                    <fa-icon [icon]="bell"></fa-icon>
+                </button> -->
+                <div class="space"></div>
+    
+                <!-- <button class="settings-icon" (click)="openSettings()">
+                    <fa-icon [icon]="settings"></fa-icon>
+                </button>  -->
+                <button class="log-out-icon" (click)="toggleIcon()">
+                    <fa-icon  [icon]="log_out"></fa-icon>
+                </button>
+            </div>
+        
+            <div *ngIf="showConfirmation" class="confirmation-dialog">
+                <p>{{ confirmationText }}</p>
+                <button (click)="confirmLogout()" class="confirm">Yes</button>
+                <button (click)="cancelLogout()" class="deny">No</button>
+            </div>
+            
+            <div class="messages">
+                <!-- <div class="search-message">
+                    <input type="text"  placeholder="Search users"  />
+                </div> -->
+                <div class="people">
+                   <div *ngFor="let chat of people" class="chatPeople" (click)="getChats(chat)">
+                    <div [ngSwitch]="chat.profilePhoto" >
+                        <div *ngSwitchCase="''">
+                        <fa-icon [icon]="user" style="font-size: 30px; margin-left: 10px;"></fa-icon>     
+                        </div>
+                        <div *ngSwitchDefault>
+                          <img src={{chat.profilePhoto}} alt="profile Photo" style="width: 40px; height: 40px; border-radius: 50%; margin-left: 5px;">     
+                        </div>
+                    </div>
+                    <span style="margin-left:15px ;">
+                        {{chat.username}}
+                    </span>
+                    
+                    <br>
+                    
+                   </div>
+                   
+                </div>
+            </div>
+    
+            <div class="chatting" >
+                <div *ngIf="selected" class="chatPanel">
+                    <div [ngSwitch]="selectedUserPhoto" style="margin-top:5px;" >
+                        <div *ngSwitchCase="''">
+                        <fa-icon [icon]="user" style="font-size: 30px; margin-left: 10px;"></fa-icon>     
+                        </div>
+                        <div *ngSwitchDefault>
+                          <img src={{selectedUserPhoto}} alt="profile Photo" style="width: 40px; height: 40px; border-radius: 50%; margin-left: 5px;">     
+                        </div>
+                    </div>
+                    <p class="username" style="margin-left: 10px;">
+                        {{selectedUserName}}
+                    </p>
+                </div>
+                <div *ngIf="selected" class="sended-messages" #chatContainer>
+                    <div *ngFor="let message of messages" [ngClass]="{'right-block': message.senderId === currentUserId, 'left-block': message.senderId !== currentUserId}">
+                        <p *ngIf="message.senderId !== currentUserId" style="color: white"> {{ this.members[message.senderId] }} </p>    
+                        <span>
+                            {{ decyptMessage(message.message) }}
+                        </span>
+                    </div>
+                    
+                </div>
+                <div *ngIf="selected" class="type-message">
+                    <input type="text" placeholder=" your message here..." [(ngModel)]="inputMessage" (keydown.enter)="sendMessage()" maxlength="1000">
+                    <button class="send-button" (click)="sendMessage()">
+                        <fa-icon [icon]="send"></fa-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

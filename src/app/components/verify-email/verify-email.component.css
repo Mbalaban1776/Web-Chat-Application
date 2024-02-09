@@ -1,0 +1,41 @@
+.body{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    font-family: sans-serif;
+}
+
+fa-icon{
+    position: relative;
+    left: 150px;
+
+    color: rgb(91, 88, 236);
+    font-size: 300px;
+}
+
+h2{
+    position: relative;
+    top: -50px;
+    left: 30px;
+
+    font-weight: 100;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.return-login{
+    cursor: pointer;
+
+    position: relative;
+    top: -20px;
+    left: 240px;
+
+    background-color: rgb(161, 159, 240);
+    height: 30px;
+    border-radius: 10px;
+    border-width: 0px;
+}
+

@@ -1,0 +1,54 @@
+.body{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+fa-icon{
+    position: relative;
+    top: -100px;
+
+    color: rgb(91, 88, 236);
+    font-size: 300px;
+}
+
+hr{
+    width: 600px;
+    position: relative;
+    top: -100px;
+
+    border-color: rgb(244, 244, 244);
+}
+
+h1{
+    position: absolute;
+    top: 520px;
+
+    font-weight: 100;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+
+p{
+    position: absolute;
+    top: 600px;
+
+    font-weight: 100;
+    font-size: 35px;
+    font-family: sans-serif;
+    color: gray;
+}
+
+button{
+    cursor: pointer;
+    
+    position: absolute;
+    top: 700px;
+    background-color: rgb(134, 132, 225);
+
+    height: 30px;
+    width: 120px;
+    border-radius: 30px;
+}

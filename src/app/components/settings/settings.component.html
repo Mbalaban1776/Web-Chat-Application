@@ -1,0 +1,30 @@
+<div class="settings">
+    <div class="settings-container">
+        <fa-icon [icon]="arrow" class="arrow-icon" (click)="returnToMain()"></fa-icon>
+        <h2>Settings</h2>
+        <div [ngClass]="showThemeSettings ? 'active' : 'setting-options'" >
+            <div class="setting-title" (click)="showThemeSet()">
+                Theme
+            </div>
+            <div class="content">
+                <div class="sub-settings" (click)="changeTheme('Default')">
+                    Default
+                </div>
+                <div class="sub-settings" (click)="changeTheme('DarkMode')">
+                    Dark
+                </div>
+            </div>
+        </div>
+        
+        <div [ngClass]="showPasswordSettings ? 'active' : 'setting-options'" >
+            <div class="setting-title" (click)="showPasswordSet()">
+                Change password
+            </div>
+            <div class="content">
+                <div class="message">Sends password reset link.</div>
+                <button (click)="changePassword()">Send</button>
+            </div>
+        </div>
+        
+    </div>
+</div>

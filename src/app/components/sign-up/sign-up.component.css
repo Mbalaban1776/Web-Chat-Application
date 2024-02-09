@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.body{
+    position: relative;
+    transform: translate(0, 10%);
+    width: 60%;
+    height: 80vh;
+    background-color: #3C61BE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 20px;
+}
+
+
+.container{
+    width: 60%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+.logo{
+    width: 140px;
+    height: 103px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    max-width: 100%; 
+    max-height: 100%; 
+    width: auto;
+    height: auto; 
+}
+
+.create-account{
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 23px;
+    font-weight: 700;
+    width: 288px;
+    height: 36px;
+    margin-bottom: 20px;
+    color: #0215e2;
+}
+.name{
+    width: 288px;
+    height: 36px;
+    margin-bottom: 20px;
+}
+.email{
+    width: 288px;
+    height: 36px;
+    margin-bottom: 20px;
+}
+.create-password{
+    position: relative;
+    width: 288px;
+    height: 36px;
+    margin-bottom: 20px;    
+}
+.confirm-password{
+    position: relative;
+    width: 288px;
+    height: 36px;
+    margin-bottom: 20px;
+}
+.continue{
+    cursor: pointer;
+    
+    text-align: center;
+    width: 150px;
+    height: 36px;
+    border-radius:20px;
+    background-color: #2F327C;
+    border: 2px #2F327C solid;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: #FFFFFF;
+
+    margin-top: 10px;
+}
+.return-login{
+    cursor: pointer;
+    
+    text-align: center;
+    width: 140px;
+    height: 25px;
+    border-radius:20px;
+    background-color: #2F327C;
+    border: 2px #2F327C solid;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: #FFFFFF;
+
+    margin-top: 20px;
+}
+input{
+    flex: 1;
+    width: 288px;
+    height: 36px;
+    border-radius:10px;
+    border: 2px #DBDBDB solid;
+    font-size: 16px;
+    
+}
+.icon{
+    position: absolute;
+    top: 3px;
+    right: 7px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

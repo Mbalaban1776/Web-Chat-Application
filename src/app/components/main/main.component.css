@@ -1,0 +1,218 @@
+.body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    width: 95%;
+    border-radius: 30px;
+}
+.nav{
+    border-radius: 30px;
+    flex-grow: 1;
+    background-color: #BFCDF1;
+    min-width: 150px;
+    height:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.profile-image{
+    margin-top: 50px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.message-icon{
+    flex-grow: 1;
+}
+.phone-icon{
+    flex-grow: 1;
+}
+.notification-icon{
+    flex-grow: 1;
+}
+.space{
+    flex-grow: 10;
+}
+.settings-icon{
+    flex-grow: 1;
+}
+.log-out-icon{
+    flex-grow: 1;
+}
+
+.messages{
+    border-radius: 30px;
+    flex-grow: 3;
+    background-color: #F2F2F2;
+    max-width: 500px;
+    height:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.search-message{
+    width: 400px;
+    height: 50px;
+    flex-grow: 1;
+}
+.chatPeople{
+    width: 400px;
+    height: 50px;
+    background-color: bisque;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center; 
+    justify-content:flex-start;
+}
+.search-message input{
+    top: 30px;
+    left: 20px;
+    margin-top:30px;
+    width: 400px;
+    height: 50px;
+    border-radius:10px;
+    border: none;
+    font-size: 20px;
+
+}
+.people{
+    flex-grow: 20;
+}
+
+.chatting{
+    border-radius: 30px;
+    flex-grow: 6;
+    background-color:#869FDD ;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.sended-messages{
+    width: 90%;
+    flex-grow: 20;
+    
+    /* display: flex; */
+    margin-top: 10px;
+    overflow: auto;
+   
+    
+    
+}
+.chatPanel{
+    box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    margin-top: 30px;
+    align-items: center; 
+    justify-content:flex-start;
+    background-color: coral;
+    width: 90%;
+    border-radius: 20px;
+    height: 50px;
+    
+    
+}
+.right-block{
+    margin-right: 8px;
+    word-wrap: break-word;
+    text-align: right;
+}
+.left-block{
+    word-wrap: break-word;
+    /* margin-top: 5px; */
+}
+.right-block span,.left-block span{
+    background-color: white;
+    display: inline-block;
+    font-size:18px;
+    padding: 6px; 
+    margin-top: 3px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    max-width: 400px; 
+    
+}
+.type-message{
+    flex-grow: 1;
+    position: relative;
+    margin-top:5px;
+    margin-right: 40px;
+}
+.type-message input{
+    margin-bottom: 20px;
+    width: 500px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #F2F2F2;
+    border: none;
+}
+.type-message button{
+    position: absolute;
+    background-color: #F2F2F2;
+    height: 42px;
+}
+fa-icon{
+    font-size: 30px;
+}
+button{
+    background-color:#BFCDF1;
+    border: none;
+    cursor: pointer;;
+}
+
+.confirmation-dialog {
+    position: fixed;
+    color: white;
+    bottom: 50px;
+    left: 200px;
+    background-color: #869FDD;
+    padding: 10px;
+    border: 1px solid rgb(188, 11, 11); /* Evet düğmesi çerçeve rengi */
+    z-index: 1000; /* Diğer öğelerin üstünde görüntülenmesi için z-index kullanabilirsiniz */
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    row-gap: 15px; /* Düğmeler arasındaki boşluğu ayarlayabilirsiniz */
+    border-radius:10px;
+  }
+
+  .confirmation-dialog .confirm {
+    background-color: white; /* Evet düğmesi arka plan rengi */
+    color:  #4665B5; /* Evet düğmesi metin rengi */
+    border: 2px solid white; /* Evet düğmesi çerçeve rengi */
+    margin-left: 10px;
+  }
+  
+  .confirmation-dialog .deny {
+    background-color: white; /* Hayır düğmesi arka plan rengi */
+    color:  #4665B5; /* Hayır düğmesi metin rengi */
+    border: 2px solid white; /* Hayır düğmesi çerçeve rengi */
+    margin-left: 10px;
+  }
+  
+  .confirmation-dialog .confirm:hover {
+    background-color: darkred; /* Evet düğmesi üzerine gelindiğinde arka plan rengi */
+    color: white;
+  }
+  
+  .confirmation-dialog .deny:hover {
+    background-color: #BFCDF1; /* Hayır düğmesi üzerine gelindiğinde arka plan rengi */
+    color: white;
+}
+
+
+
+

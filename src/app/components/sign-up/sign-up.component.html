@@ -1,0 +1,31 @@
+<div class="body">
+    <div class="container">
+        <div class="logo">
+            <img src="../assets/people.png">
+        </div>
+        <div class="create-account">
+            Create Account
+        </div>
+        <div class="name">
+            <input type="text" placeholder="Enter your full name" #fullname="ngModel" [(ngModel)]="name" required>
+        </div>
+        <div class="email">
+            <input type="email" placeholder="Enter your email" #yourEmail="ngModel" [(ngModel)]="email" required>
+        </div>
+        <div class="create-password">
+            <input [type]="showPassword ? 'text':'password'" placeholder="Create password" #yourPassword="ngModel" [(ngModel)]="password" required>
+            <div class="icon" (click)="PasswordShow()">
+                <fa-icon [icon]="eye"></fa-icon>
+            </div>
+        </div>
+        <div class="confirm-password">
+            <input [type]="showConfirmPassword ? 'text':'password'" placeholder="Confirm password" [(ngModel)]="confirmPassword" required>
+            <div class="icon" (click)="ConfirmPasswordShow()">
+                <fa-icon [icon]="eye"></fa-icon>
+            </div>
+        </div>
+        <button class="continue" (click)="checkPasswordMatch()">Continue</button>
+        <button class="return-login" (click)="returnToLogin()">Return to Login</button>
+    </div>
+</div>
+
